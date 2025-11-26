@@ -4,17 +4,7 @@ import "./contact.css";
 
 const Contact = () => {
   const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-    .sendForm(
-      
-    )
-    e.target.reset();
-  };
-
+  
   return (
     <section className="contact section" id="contact">
       <h2 className="section__title">Get in Touch...</h2>
@@ -55,7 +45,7 @@ const Contact = () => {
         <div className="contact__content">
           <h3 className="contact__title">Write something</h3>
 
-          <form className="contact__form" ref={form} onSubmit={sendEmail}>
+          <form className="contact__form" ref={form}>
             <div className="contact__form-div">
               <label className="contact__form-tag">Name</label>
               <input
